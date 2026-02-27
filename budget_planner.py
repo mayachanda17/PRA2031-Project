@@ -20,15 +20,6 @@ class Person:
         self.bmr = bmr
         self.calorie_needs = calorie_needs
 
-    def estimated_grocery_budget(self, price_per_1000_kcal: float = 4) -> float:
-        price_per_1000_kcal:
-            cheap diet = 2-3
-            normal =4
-            healthy/high protein = 5-7
-        monthly_kcal = daily_kcal*30
-        estimated = (monthly_kcal/1000)*price_per_1000_kcal
-        return round(estimated, 2)
-    
     @property
     def age(self):
         return self._age
@@ -142,6 +133,15 @@ class Person:
         else:
             calories -= 500
         return round(calories)
+
+   def estimated_grocery_budget(self, price_per_1000_kcal: float = 4) -> float:
+        price_per_1000_kcal:
+            cheap diet = 2-3
+            normal =4
+            healthy/high protein = 5-7
+        monthly_kcal = daily_kcal*30
+        estimated = (monthly_kcal/1000)*price_per_1000_kcal
+        return round(estimated, 2)
 
 class Priorities :
 
