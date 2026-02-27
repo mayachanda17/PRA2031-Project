@@ -39,3 +39,11 @@ cd student-budget-planner
 
 # License 
 Academic project - not for commercial use
+
+
+libraries, python , mathplotlib 
+files with the classes and aim of class and functions in the classes
+screenshot plot 
+how do we call the classes in diff files 
+data 
+
