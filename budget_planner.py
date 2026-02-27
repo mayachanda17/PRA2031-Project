@@ -281,6 +281,8 @@ class Student:
 """note of print vs return: print prints whats inside fonction return sends the value out """
 """ngl i still dont fully get the concept of (self) and self."""
 
+class Budget :
+
 budget1 = Budget(budget) 
 print("Your Rent Budget is €", budget1.rent)
 print("Your Food Budget is €", budget1.food_budget)
