@@ -36,3 +36,6 @@ cd student-budget-planner
 - Mila Croci (m.croci@student.maastrichtuniversity.nl)
 
 # Contribution Guideline
+
+# License 
+Academic project - not for commercial use
