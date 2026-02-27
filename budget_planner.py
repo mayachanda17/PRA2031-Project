@@ -20,6 +20,15 @@ class Person:
         self.bmr = bmr
         self.calorie_needs = calorie_needs
 
+    def estimated_grocery_budget(self, price_per_1000_kcal: float = 4) -> float:
+        price_per_1000_kcal:
+            cheap diet = 2-3
+            normal =4
+            healthy/high protein = 5-7
+        monthly_kcal = daily_kcal*30
+        estimated = (monthly_kcal/1000)*price_per_1000_kcal
+        return round(estimated, 2)
+    
     @property
     def age(self):
         return self._age
@@ -173,7 +182,8 @@ class Priorities :
            remaining -= amount
            print(f"Affordable - {expense}: {amount}")
       else:
-           print(f"Cannot afford - {expense}: {amount}- consider cutting this")
+          overspend = spent_so_far + amount - total_budget
+           print(f"Cannot afford - {expense}: {amount}- You're exceding your budget by {overspend}€")
     
       print(f"Total expenses : {Total}")
       print(f"Remaining budget : {reamining}")
