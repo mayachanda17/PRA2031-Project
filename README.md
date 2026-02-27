@@ -28,7 +28,7 @@ cd student-budget-planner
 # Future improvements 
 
 
-# Contact Details 
+# Authors/Contact Details 
 - Maya Chanda (ma.chanda@student.maastrichtuniversity.nl)
 - Szonja Szekeres (s.szekeres@student.maastrichtuniversity.nl)
 - Szymon Stembalski (s.stembalski@student.maastrichtuniversity.nl)
