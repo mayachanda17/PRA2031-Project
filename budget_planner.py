@@ -9,6 +9,7 @@ height = int(input("Please enter your height (in centimeters): "))
 budget = int(input("Please enter your budget: "))
 """print(age)
 print(height)"""
+
 class Person:
     def __init__(self, name, age, height, gender, bmi, activity_level, bmr, calorie_needs):
         self.name = name
