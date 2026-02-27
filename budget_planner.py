@@ -151,10 +151,10 @@ class Gym(Budget): #creating a child class (inheritance) for someone who goes to
 
 class Priorities :
 
-    def __init__ (self, rent, groceries, insurance, bike_subscription, gym_subscription, going_out, hair_salon, hygenic_products, gifts, debts, savings):
+    def __init__(self, rent, groceries, insurance, bike_subscription, gym_subscription, going_out, hair_salon, hygenic_products, gifts, debts, savings):
      self.rent = rent
      self.groceries = groceries 
-     self. insurance = insurance
+     self.insurance = insurance
      self.bike_subscription = bike_subscription
      self.gym_subscription = gym_subscription
      self.going_out = going_out
