@@ -134,21 +134,6 @@ class Person:
             calories -= 500
         return round(calories)
 
-class Budget:
-    def __init__(self, overall_budget):
-        self.overall_budget = overall_budget 
-        self.rent = overall_budget * .5
-        self.food_budget = overall_budget * .1
-        self.socialising_budget = overall_budget * .1
-        self.exercising_budget = overall_budget * .1
-        self.transportation_budget = overall_budget * .1
-        self.emergency_fund = overall_budget * .1
-    
-class Gym(Budget): #creating a child class (inheritance) for someone who goes to the gym 
-    def __init__ (self, overall_budget):
-        super().__init__(overall_budget)
-        self.exercise_budget_modifier = exercise_budget * 1.5
-
 class Priorities :
 
     def __init__(self, rent, groceries, insurance, bike_subscription, gym_subscription, going_out, hair_salon, hygenic_products, gifts, debts, savings):
@@ -196,6 +181,7 @@ class Priorities :
         app.py
         
      print(priority_of_activities)
+
 
 class student: 
     """ this class focuss on academic buget """
