@@ -39,8 +39,6 @@ cd student-budget-planner
 - Maya Eden (m.gohy@student.maastrichtuniversity.nl)
 - Mila Croci (m.croci@student.maastrichtuniversity.nl)
 
-# Contribution Guideline
-
 # License 
 Academic project - not for commercial use
 
