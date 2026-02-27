@@ -148,42 +148,37 @@ class Priorities :
      self.gifts = gifts
      self.debts = debts
      self.savings = savings
+   @property
+   def priority_of_activities(self):
+       activities = {  "rent" : self.rent,
+        "groceries" : self.groceries,
+        "insurance" : self.insurance,
+        "bike_subscription" : self.bike_subscription,
+        "gym_subscription" : self.gym_subscription,
+        "going_out" : self.going_out,
+        "hair_salon" : self.hair_salon,
+        'hygenic_products': self.hygenic_products,
+        "gifts" : self.gifts,
+        "debts" : self.debts,
+        "savings" : self.savings}
+    sorted_activities = dict(sorted(activities.items(), key=lambda x: x[1], reverse=True))
+    return sorted_activities
 
-    def priority_of_activities(self):
-       from flask import Flask, request, jsonify
-       app = Flask(__Budget_calculator__) 
-       activities = {  "rent" : price(),
-        "groceries" : price()
-        "insurance" : price(),
-        "bike_subscription" : price(),
-        "gym_subscription" : price(),
-        "going_out" : price(),
-        "hair_salon" : price (),
-        'hygenic_produtcs': price(),
-        "gitfs" : price(),
-        "debts" : price(),
-        "savings" : price() }
-    def compute_priorities(activities):
+   def compute_priorities(activities):
         total = sum (activities.values())
-
-        if total == 0:
-            return  {k: 0 for k in activities}
-        return  {k: v / total for k, v in activities.items()}
+        budget = float(input ("Enter your total budget:"))
+        remaining = budget
+       for expense, amount in activites.items():
+       if remaining >= amount:
+           remaining -= amount
+           print(f"Affordable - {expense}: {amount}")
+      else:
+           print(f"Cannot afford - {expense}: {amount}- consider cutting this")
     
-    @app.route('/priorities', methods=["POST"] )
-    def calculate_priorities():
-        data = request.get_json()
-        priorities = compute_priorities(data)
-        return jsonify(priorities)
-    
-    if __Budget_calculator__ == '__main__':
-        app.run(debug=True)
-        app.py
-        
-     print(priority_of_activities)
+      print(f"Total expenses : {Total}")
+      print(f"Remaining budget : {reamining}")
 
-
-class student: 
+class Student: 
     """ this class focuss on academic buget """
     def __init__(self, device_cost=0, stationary_cost=0, printing_price=0, monthly_tuition_payment=0):
         self.device_cost = device_cost
