@@ -26,8 +26,8 @@ cd student-budget-planner
 1. Code:
 # Classes Description 
 - Person.py: This class is responsible for handling personal health-related calculations such as age, height, weight, bmi, bmr, activity level, calorie intake
--  Priorities.py Manages and analyzes how a user distributes their monthly budget across different spending categories (Rent, Groceries, Insurance, Bike subscription, Gym subscription, Going out, Hair salon, Hygienic products, Gifts, Debts, Savings). The used data is estimated on average cost of living in Maastricht. The main goal is to determine how a user's total budget is distributed across financial priorities.
--  The student class calculates a student’s monthly academic expenses, including device costs, stationery, printing, and tuition. Its purpose is to estimate the total amount a student spends each month on education-related needs.
+- Priorities.py Manages and analyzes how a user distributes their monthly budget across different spending categories (Rent, Groceries, Insurance, Bike subscription, Gym subscription, Going out, Hair salon, Hygienic products, Gifts, Debts, Savings). The used data is estimated on average cost of living in Maastricht. The main goal is to determine how a user's total budget is distributed across financial priorities.
+- Student.py Calculates a student’s monthly academic expenses, including device costs, stationery, printing, and tuition. Its purpose is to estimate the total amount a student spends each month on education-related needs.
 
 # Future improvements 
 
