@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # import pandas
 print("Welcome to the budget planner!")
 name = input("Please enter your name: ")
@@ -213,6 +214,19 @@ class Student:
     """the =0 with each argument means that if the student doesnt put any values when the function is called then use 0 as a default """
     """this is good especially if somhow they are not the ones paying their monthly tuiton or if they dont use stationary cost(etc..)"""
     
+=======
+class Student: 
+    """ this class focuss on academic buget """
+    def __init__(self, device_cost=0, stationary_cost=0, printing_price=0, monthly_tuition_payment=0):
+        self.device_cost = device_cost
+        self.stationary_cost = stationary_cost
+        self.printing_price = printing_price
+        self.monthly_tuition_payment = monthly_tuition_payment
+    """self at the begining is to store the info to the specific student"""
+    """the =0 with each argument means that if the student doesnt put any values when the function is called then use 0 as a default """
+    """this is good especially if somhow they are not the ones paying their monthly tuiton or if they dont use stationary cost(etc..)"""
+    
+>>>>>>> cb0fc2fc9f1f27c8571f30a30f71a943a75a6ff9
     def what_do_you_use_to_study(self):
         print("\n what do you use to study?")
         print("1. only notebooks")
@@ -304,6 +318,29 @@ class Student:
 
 """note of print vs return: print prints whats inside fonction return sends the value out """
 """ngl i still dont fully get the concept of (self) and self."""
+<<<<<<< HEAD
+=======
+
+class Budget:
+    def __init__(self, overall_budget, rent_pct=0.5, food_pct=0.1,
+                 social_pct=0.1, exercise_pct=0.1,
+                 transport_pct=0.1, emergency_pct=0.1):
+        if overall_budget < 0:
+            raise ValueError("Overall budget cannot be negative")
+        
+        total_pct = (rent_pct + food_pct + social_pct +
+                     exercise_pct + transport_pct + emergency_pct)
+        if round(total_pct, 2) != 1.0:
+            raise ValueError("Percentages must add up to 1")
+        
+        self.overall_budget = overall_budget 
+        self.rent = overall_budget * rent_pct
+        self.food_budget = overall_budget * food_pct
+        self.socialising_budget = overall_budget * social_pct
+        self.exercising_budget = overall_budget * exercise_pct
+        self.transportation_budget = overall_budget * transport_pct
+        self.emergency_fund = overall_budget * emergency_pct
+>>>>>>> cb0fc2fc9f1f27c8571f30a30f71a943a75a6ff9
 
 budget1 = Budget(budget) 
 print("Your Rent Budget is €", budget1.rent)
@@ -312,3 +349,9 @@ print("Your Socialising Budget is €", budget1.socialising_budget)
 print("Your Exercising Budget is €", budget1.exercising_budget)
 print("Your Transportation Budget is €", budget1.transportation_budget)
 print(budget1.emergency_fund, "€ is being added into your emergency fund")
+<<<<<<< HEAD
+=======
+
+print("Your Transportation Budget is €", budget1.transportation_budget)
+print(budget1.emergency_fund, "€ is being added into your emergency fund")
+>>>>>>> cb0fc2fc9f1f27c8571f30a30f71a943a75a6ff9

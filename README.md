@@ -44,8 +44,12 @@ Academic project - not for commercial use
 
 
 libraries, python , mathplotlib 
+<<<<<<< HEAD
 files with the classes and aim of class and functions in the classes
 screenshot plot 
 how do we call the classes in diff files 
 data 
 
+=======
+files with the classes and aim of class and functions
+>>>>>>> cb0fc2fc9f1f27c8571f30a30f71a943a75a6ff9
