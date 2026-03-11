@@ -17,7 +17,7 @@ def priority_of_activities(self):
     from flask import Flask, request, jsonify
     app = Flask(__Budget_calculator__) 
     activities = {  "rent" : price(),
-        "groceries" : price(),
+        "groceries" : price(
         "insurance" : price(),
         "bike_subscription" : price(),
         "gym_subscription" : price(),
