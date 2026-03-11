@@ -5,9 +5,9 @@ Student Budget Planner is designed to help users organize theirs monthly budget 
 # Project Structure
 
 ```
-student-budget-planner/
+PRA2031-Project/
 │
-├── main.py        # Runs the program
+├── src/        # Runs the program
 ├── Person.py      # Personal health calculations
 ├── Priorities.py  # Budget distribution logic
 ├── Student.py     # Academic expenses calculations
