@@ -9,6 +9,9 @@ class Person:
         self.bmr = bmr
         self.calorie_needs = calorie_needs
 
+    def __str__(self):
+        return f"Person(name={self.name}, age={self.age})"
+
     @property
     def age(self):
         return self._age

@@ -5,7 +5,10 @@ print("   ")
 print("Hello", name)
 print("   ")
 age = int(input("Please enter your age: "))
+sex = input("Enter whether you are a MAN or WOMAN:")
+sex = sex.upper()
 height = int(input("Please enter your height (in centimeters): "))
+weight = int(input("Please enter your weight (in kilos): "))
 budget = int(input("Please enter your budget: "))
 """print(age)
 print(height)"""
@@ -20,6 +23,7 @@ class Person:
         self.activity_level = activity_level
         self.bmr = bmr
         self.calorie_needs = calorie_needs
+    
 
     @property
     def age(self):
@@ -40,13 +44,13 @@ class Person:
         self._height=height
 
     @property
-    def gender(self):
-        gender input ("Write either "Born as a man" or "Born as a woman":")
-    @gender.setter
-    def gender(self,gender):
-        if gender =/ "born as a man" and gender =/ "born as a wmoman":
-            raise ValueError("Gender not defined")
-        self._gender=gender
+    def sex(self):
+        return self._sex
+    @sex.setter
+    def sex(self, sex):
+       if sex not in ["MAN", "WOMAN"]:
+            raise ValueError("For this program, sex must be either a man or woman!")
+       self._sex = sex
 
     @property
     def bmi(self):
@@ -77,20 +81,20 @@ class Person:
         if activity_level == "5":
             return "athlete "
     @activity_level.setter
-    def activity_level(self,activity_level):
-        if level <1 or level >5:
+    def activity_level(self, activity_level):
+        if activity_level <1 or activity_level >5:
             raise ValueError("Activity level must be between 1 and 5")
         self._activity_level = activity_level  
 
     @property
-    def bmr (self):
+    def bmr(self):
         self._bmr
     @bmr.setter
     def bmr(self, bmr):
-        if self._gender == "Born as a man":
-            bmr: 10 * weight + 6.25 * height - 5 * age + 5
+        if self._gender == "MAN":
+            self._bmr = (10 * weight + 6.25 * height - 5 * age + 5)
         else :
-            bmr: 10 * weight + 6.25 * height - 5*age -161
+            self._bmr = 10 * weight + 6.25 * height - 5*age -161
         self._bmr= bmr
 
     @property
@@ -98,14 +102,14 @@ class Person:
         #Step 1: Multiply BMR by activity level factor
         if self._activity_level == "sedentary":
             calorie_needs = self._bmr + 1.2
-            elif self._activity_level == "light activity level":
+        elif self._activity_level == "light activity level":
             calorie_needs = self.bmr * 1.375
         elif self.activity_level == "moderate activity level":
             calorie_needs = self._bmr * 1.55
-        elif self._activity level == "high activity level":
+        elif self._activity_level == "high activity level":
             calorie_needs = self._bmr * 1.725
         elif self._activity_level == "athlete":
-            calorie_needs = sefl._bmr * 1.9
+            calorie_needs = self._bmr * 1.9
         self._calorie_needs = calorie_needs
         #Step 2 = Adjust for age ( depending on metabolism slowing down with age)
         if self.age < 18: 
@@ -114,7 +118,7 @@ class Person:
             calories *= 1.10 # need 10% more
         elif self.age < 30:
             calories *= 1.05 # need 5% more
-            elif self.age < 40:
+        elif self.age < 40:
             pass # as is
         elif self.age < 50:
             calories *= 0.97 # slows down 3%
@@ -135,12 +139,12 @@ class Person:
             calories -= 500
         return round(calories)
 
-   def estimated_grocery_budget(self, price_per_1000_kcal: float = 4) -> float:
-        price_per_1000_kcal:
+    def estimated_grocery_budget(self, price_per_1000_kcal: float = 4) -> float:
+        """price_per_1000_kcal:
             cheap diet = 2-3
             normal =4
-            healthy/high protein = 5-7
-        monthly_kcal = daily_kcal*30
+            healthy/high protein = 5-7"""
+        monthly_kcal = self.daily_kcal*30
         estimated = (monthly_kcal/1000)*price_per_1000_kcal
         return round(estimated, 2)
 
@@ -158,9 +162,13 @@ class Priorities :
      self.gifts = gifts
      self.debts = debts
      self.savings = savings
-   @property
-   def priority_of_activities(self):
-       activities = {  "rent" : self.rent,
+    @property
+    def priority_of_activities(self):
+    @property
+    def priority_of_activities(self):
+        activities = self.__dict__
+        return dict(sorted(activities.items(), key=lambda x: x[1], reverse=True))
+        """  activities = {  "rent" : self.rent,
         "groceries" : self.groceries,
         "insurance" : self.insurance,
         "bike_subscription" : self.bike_subscription,
@@ -170,24 +178,29 @@ class Priorities :
         'hygenic_products': self.hygenic_products,
         "gifts" : self.gifts,
         "debts" : self.debts,
-        "savings" : self.savings}
-    sorted_activities = dict(sorted(activities.items(), key=lambda x: x[1], reverse=True))
-    return sorted_activities
+        "savings" : self.savings
+    }
 
-   def compute_priorities(activities):
-        total = sum (activities.values())
+    sorted_activities = dict(
+        sorted(activities.items(), key=lambda x: x[1], reverse=True)
+    )
+
+    return sorted_activities"""
+
+    def compute_priorities(activities):
+        total = sum (activities.items())
         budget = float(input ("Enter your total budget:"))
         remaining = budget
-       for expense, amount in activites.items():
-       if remaining >= amount:
-           remaining -= amount
-           print(f"Affordable - {expense}: {amount}")
-      else:
-          overspend = spent_so_far + amount - total_budget
-           print(f"Cannot afford - {expense}: {amount}- You're exceding your budget by {overspend}€")
+        for expense, amount in activities.values():
+            if remaining >= amount:
+                remaining -= amount
+                print(f"Affordable - {expense}: {amount}")
+            else:
+                overspend =  amount - remaining
+                print(f"Cannot afford - {expense}: {amount}- You're exceding your budget by {overspend}€")
     
-      print(f"Total expenses : {Total}")
-      print(f"Remaining budget : {reamining}")
+        print(f"Total expenses : {total}")
+        print(f"Remaining budget : {remaining}")
 
 class Student: 
     """ this class focuss on academic buget """
@@ -291,8 +304,6 @@ class Student:
 
 """note of print vs return: print prints whats inside fonction return sends the value out """
 """ngl i still dont fully get the concept of (self) and self."""
-
-class Budget :
 
 budget1 = Budget(budget) 
 print("Your Rent Budget is €", budget1.rent)
