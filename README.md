@@ -2,6 +2,17 @@
 Student Budget Planner is a tool to analyze monthly expenses for students in Maastricht. 
 # Description
 Student Budget Planner is designed to help users organize theirs monthly budget using Object-Oriented Progamming. The program collects user details such as name, age, and total budget, then distributes the budget across essential spending categories (also makes different priority classes) like rent, food, transportation, and savings.
+# Project Structure
+
+```
+student-budget-planner/
+│
+├── main.py        # Runs the program
+├── Person.py      # Personal health calculations
+├── Priorities.py  # Budget distribution logic
+├── Student.py     # Academic expenses calculations
+└── README.md      # Project documentation
+```
 
 # Features
 - Feature 1: Automatic budget distribution
@@ -11,12 +22,44 @@ Student Budget Planner is designed to help users organize theirs monthly budget 
 # Installation
 # How to run it
 python main.py
-## Example interaction: 
+# Example interaction: 
+## Welcome to Student Budget Planner!
 
+### Enter your name: John
+
+### Enter your age: 20
+
+### Enter your height (cm): 175
+
+### Enter your weight (kg): 70
+
+### Enter your total monthly budget (€): 1000
+
+Calculating your personalized budget...
+
+Budget distribution:
+- Rent: €400
+- Groceries: €210 (based on BMI and caloric needs)
+- Transportation: €100
+- Savings: €150
+- Lifestyle (Gym, Going Out, Hair, Gifts, etc.): €140
+
+Estimated monthly academic expenses:
+- Tuition: €250
+- Device costs: €50
+- Stationery & Printing: €30
+- Total academic expenses: €330
+
+Your remaining balance: €70
 # Setup 
 git clone https://github.com/your-username/student-budget-planner.git
 cd student-budget-planner
 
+## Libraries Used
+
+- Python standard library
+- math
+- matplotlib
 
 # Prerequisites
 - Python 3.8 or higher
