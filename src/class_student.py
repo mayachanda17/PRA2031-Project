@@ -1,5 +1,5 @@
 class Student: 
- 
+ """ Gather budget information about the user if a student"""
     def __init__(self, device_cost=0, stationary_cost=0, printing_price=0, monthly_tuition_payment=0):
         self.device_cost = device_cost
         self.stationary_cost = stationary_cost
