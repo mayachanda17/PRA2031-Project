@@ -105,7 +105,7 @@ activities = priorities1.priority_of_activities()
 print("activities =", activities)
 print("object type =", type(priorities1))
 
-is_student= input("Are you a student? (yes/no):").strip().lower() 
+is_student= input("Are you a student? (yes/no):").strip().lower() == "yes"
 if is_student:
     print("========== ACADEMIC COSTS ==========")
     print("Device cost per month: €", round(student1.device_cost, 2))
