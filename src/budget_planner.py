@@ -76,7 +76,7 @@ print("--- ACADEMIC COSTS ---")
 student1 = Student()
 student1.what_do_you_use_to_study()
 student1.printing_usage()
-student1.tuiton_fee()
+student1.tuition_fee()
 
 # -------------------------
 # PRINT RESULTS
