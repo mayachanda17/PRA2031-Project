@@ -1,19 +1,47 @@
+from class_person import Person
 class Budget:
-    def __init__(self, overall_budget, rent_pct=0.5, food_pct=0.1,
-                 social_pct=0.1, exercise_pct=0.1,
-                 transport_pct=0.1, emergency_pct=0.1):
-        if overall_budget < 0:
-            raise ValueError("Overall budget cannot be negative")
-        
-        total_pct = (rent_pct + food_pct + social_pct +
-                     exercise_pct + transport_pct + emergency_pct)
-        if round(total_pct, 2) != 1.0:
-            raise ValueError("Percentages must add up to 1")
-        
-        self.overall_budget = overall_budget 
-        self.rent = overall_budget * rent_pct
-        self.food_budget = overall_budget * food_pct
-        self.socialising_budget = overall_budget * social_pct
-        self.exercising_budget = overall_budget * exercise_pct
-        self.transportation_budget = overall_budget * transport_pct
-        self.emergency_fund = overall_budget * emergency_pct
+    def __init__(self, priorities, student=None):
+        self.priorities = priorities
+        self.student = student
+        self.income = priorities.income
+
+   # if self.income < 0:
+      #  raise ValueError("Income cannot be negative")
+
+    def monthly_priority_costs(self):
+        return {
+            "rent": self.priorities.rent,
+            "groceries": self.priorities.groceries,
+            "insurance": self.priorities.insurance,
+            "bike_subscription": self.priorities.bike_subscription,
+            "gym_subscription": self.priorities.gym_subscription,
+            "going_out": self.priorities.going_out,
+            "hair_salon": self.priorities.hair_salon,
+            "hygenic_products": self.priorities.hygenic_products,
+            "gifts": self.priorities.gifts,
+            "debts": self.priorities.debts,
+            "savings": self.priorities.savings,
+        }
+
+    def total_priority_costs(self):
+        return sum(self.monthly_priority_costs().values())
+
+    def total_student_costs(self):
+        if self.student is None:
+            return 0
+        return self.student.total_monthly_academic_costs()
+
+    def total_expenses(self):
+        return self.total_priority_costs() + self.total_student_costs()
+
+    def remaining_budget(self):
+        return self.income - self.total_expenses()
+
+    def summary(self):
+        return {
+            "income": self.income,
+            "priority_costs": self.total_priority_costs(),
+            "student_costs": self.total_student_costs(),
+            "total_expenses": self.total_expenses(),
+            "remaining_budget": self.remaining_budget(),
+        }

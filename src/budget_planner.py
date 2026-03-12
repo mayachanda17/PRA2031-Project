@@ -5,6 +5,9 @@ from visualisation import (
 )
 from class_person import Person
 from class_budget import Budget
+import class_budget
+#print(class_budget.__file__)
+#print(Budget)
 from class_priorities import Priorities
 from class_student import Student
 
@@ -52,6 +55,7 @@ debts = float(input("Enter your debts price: ")),
 savings = float(input("Enter your preferred savings amount: ")),
 )
 budget1 = Budget(priorities1)
+print(dir(budget1))
 print("Total expenses:", budget1.total_expenses())
 print("Remaining budget:", budget1.remaining_budget())
 
@@ -83,17 +87,14 @@ print("Estimated monthly grocery budget: €", person1.estimated_grocery_budget(
 
 print()
 print("========== BUDGET BREAKDOWN ==========")
-print("Your Rent Budget is €", budget1.rent)
-print("Your Food Budget is €", budget1.food_budget)
-print("Your Socialising Budget is €", budget1.socialising_budget)
-print("Your Exercising Budget is €", budget1.exercising_budget)
-print("Your Transportation Budget is €", budget1.transportation_budget)
-print(budget1.emergency_fund, "€ is being added into your emergency fund")
+for category, amount in budget1.monthly_priority_costs().items():
+    print(f"{category}: €{amount}")
 
 print()
 print("========== EXPENSE PRIORITIES ==========")
-for activity, amount in priorities1.priority_of_activities().items():
-    print(f"{activity}: €{amount}")
+activities = priorities1.priority_of_activities()
+print("activities =", activities)
+print("object type =", type(priorities1))
 
 print()
 print("========== ACADEMIC COSTS ==========")
