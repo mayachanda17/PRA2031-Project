@@ -1,25 +1,25 @@
 1. Housing 
-* Room - 563 euro per month (27.03 per m2)
-* Studio - 1097 euro per month (17.70 per m2)
-* Apartment - 1293 euro per month (17.08 per m2) 
+Room - 563 euro per month (27.03 per m2)
+Studio - 1097 euro per month (17.70 per m2)
+Apartment - 1293 euro per month (17.08 per m2) 
 
 2. Food 
-* Groceries = 150 to 400 euro (including toiletries) 
-* Eating out - 15 to 35 euro per meal, on average (considering eating out weekly: 150-300euro per month) 
+Groceries = 200
+Eating out = 15 to 35 euro per meal, on average (considering eating out weekly: 150-300euro per month) 
 
 3. Socialising - in general estimation 100 to 300+ euro, considering: 
-* Nightlife (4 to 15 euro per drink, 5-15 euro per club tickets)
-* Social activities (10-15 euro per cinema ticket, cultural events 15 to 30 euro) 
+Nightlife (4 to 15 euro per drink, 5-15 euro per club tickets)
+Social activities (10-15 euro per cinema ticket, cultural events 15 to 30 euro) 
 
 4. Exercising
-* 20 to 35 euro per month on gym membership (including university options) 
+20 to 35 euro per month on gym membership (including university options) 
 
 5. Transportation 
-* Public transport - 30 euro for monthly bus ticket 
-* Used bike - 50 to 150 euro (one time payment) 
+Public transport - 30 euro for monthly bus ticket 
+Used bike - 50 to 150 euro (one time payment) 
 
 6. Academic costs 
-* Tuition fees - 225 to 2100 euro (depending on study program, EU/EEA vs non EU/EEA students, etc.) 
-* Books & Studying Materials - around 53 euro 
-* Electronics (Laptop or tablet) - 500 to 1200 euro 
-* Printing - 0.05 to 0.15 euro per use 
+Tuition fees - 225 to 2100 euro (depending on study program, EU/EEA vs non EU/EEA students, etc.) 
+Books & Studying Materials - around 53 euro 
+Electronics (Laptop or tablet) - 500 to 1200 euro 
+Printing - 0.05 to 0.15 euro per use 
