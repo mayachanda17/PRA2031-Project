@@ -98,13 +98,14 @@ activities = priorities1.priority_of_activities()
 print("activities =", activities)
 print("object type =", type(priorities1))
 
-print()
-print("========== ACADEMIC COSTS ==========")
-print("Device cost per month: €", round(student1.device_cost, 2))
-print("Stationary cost: €", round(student1.stationary_cost, 2))
-print("Printing cost: €", round(student1.printing_price, 2))
-print("Monthly tuition payment: €", round(student1.monthly_tuition_payment, 2))
-print("Total monthly academic costs: €", round(student1.total_monthly_academic_costs(), 2))
+is_student= input("Are you a student? (yes/no):").strip().lower() 
+if is_student:
+    print("========== ACADEMIC COSTS ==========")
+    print("Device cost per month: €", round(student1.device_cost, 2))
+    print("Stationary cost: €", round(student1.stationary_cost, 2))
+    print("Printing cost: €", round(student1.printing_price, 2))
+    print("Monthly tuition payment: €", round(student1.monthly_tuition_payment, 2))
+    print("Total monthly academic costs: €", round(student1.total_monthly_academic_costs(), 2))
 
 # -------------------------
 # VISUALISATIONS
