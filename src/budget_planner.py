@@ -45,7 +45,6 @@ print("--- MONTHLY EXPENSE PRIORITIES ---")
 priorities1 = Priorities (
 income = float(input("Enter your income:")),
 rent = float(input("Enter your rent price: ")),
-groceries = float(input("Enter your groceries price: ")),
 insurance = float(input("Enter your insurance price: ")),
 bike_subscription = float(input("Enter your bike subscription price: ")),
 gym_subscription = float(input("Enter your gym subscription price: ")),
@@ -56,6 +55,11 @@ gifts = float(input("Enter your preferred gifts budget: ")),
 debts = float(input("Enter your debts price: ")),
 savings = float(input("Enter your preferred savings amount: ")),
 )
+with open ("average_costs.txt", "r") as f:
+    for line in f:
+        key, value= line.strip().split("=")
+        if key == "groceries":
+            
 budget1 = Budget(priorities1)
 print(dir(budget1))
 print("Total expenses:", budget1.total_expenses())
