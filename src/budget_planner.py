@@ -115,8 +115,11 @@ if is_student:
 # VISUALISATIONS
 # -------------------------
 plot_budget_distribution(budget1)
+"""print("RUNNING budget_planner.py")
+
 activities = priorities1.priority_of_activities()
 print("activities:", activities)
-plot_priorities(activities)
-plot_priorities(activities)
+print("type(activities):", type(activities))
+
+plot_priorities(activities)"""
 plot_calorie_needs(person1.bmr)
