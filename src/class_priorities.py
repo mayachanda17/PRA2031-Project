@@ -14,6 +14,11 @@ class Priorities :
         self.debts = debts
         self.savings = savings
 
+    def __str__(self):
+        return (f"Income: €{self.income}\n"
+                f"Rent: €{self.rent}\n"
+                f"Groceries: €{self.groceries}\n"
+                f"Savings: €{self.savings}")
 
     def priority_of_activities(self): 
         essentials = self.rent + self.groceries + self.insurance + self.bike_subscription
