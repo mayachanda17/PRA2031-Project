@@ -1,98 +1,199 @@
 # Student Budget Planner
-Student Budget Planner is a tool to analyze monthly expenses for students in Maastricht. 
-# Description
-Student Budget Planner is designed to help users organize theirs monthly budget using Object-Oriented Progamming. The program collects user details such as name, age, and total budget, then distributes the budget across essential spending categories (also makes different priority classes) like rent, food, transportation, and savings.
-# Project Structure
+
+Student Budget Planner is a Python project that helps students estimate and organize their monthly expenses in Maastricht. It combines personal health calculations, budgeting logic, student-related academic costs, and visualisations in one command-line application.
+
+---
+
+## Description
+
+The program collects personal and financial information from the user and then calculates:
+
+- Personal health metrics such as **BMI**, **BMR**, and estimated **daily calorie needs**
+- An estimated **grocery budget** based on calorie needs
+- Monthly expense priorities such as **rent, groceries, insurance, subscriptions, gifts, debts, and savings**
+- Academic costs such as **tuition, printing, stationery, and device-related costs**
+- Visual summaries of budget data
+
+The project is built using **Object-Oriented Programming (OOP)**, with separate classes handling personal information, budgeting, priorities, and student expenses.
+
+This program is intended as a guideline to help organise and estimate student expenses. It should not be used as a definitive or precise budget calculation tool.
+
+---
+
+## Features
+
+- Monthly budget breakdown
+- Expense priority analysis
+- Student academic cost calculator
+- Personalised grocery budget estimate
+- Health-related calculations (BMI, BMR, calorie needs)
+- Data visualisation using `matplotlib`
+
+---
+
+## Project Structure
 
 ```
 PRA2031-Project/
 │
-├── src/        # Runs the program
-├── Person.py      # Personal health calculations
-├── Priorities.py  # Budget distribution logic
-├── Student.py     # Academic expenses calculations
-└── README.md      # Project documentation
+├── src/
+│   ├── budget_planner.py       # Main program file
+│   ├── class_budget.py         # Budget calculations
+│   ├── class_person.py         # Personal health calculations
+│   ├── class_priorities.py     # Priority and spending logic
+│   ├── class_student.py        # Academic expense calculations
+│   ├── visualisation.py        # Graphs and plots
+│   └── average_costs.txt       # Supporting cost data
+│
+├── requirements.txt            # Project dependencies
+└── README.md                   # Project documentation
 ```
 
-# Features
-- Feature 1: Automatic budget distribution
-- Feature 2: Monthly breakdown
-- Feature 3: Student expense calculator
-- Feature 4: Personalised grocieres budget, based on the calories intake needed, calculated with BMI
-# Installation
-# How to run it
-python main.py
-# Example interaction: 
-## Welcome to Student Budget Planner!
+---
 
-### Enter your name: John
+## Classes Overview
 
-### Enter your age: 20
+### Person
+Handles personal health-related calculations, including:
 
-### Enter your height (cm): 175
+- BMI
+- BMR
+- Activity level
+- Daily calorie needs
+- Estimated grocery budget
 
-### Enter your weight (kg): 70
+### Budget
+Handles financial calculations such as:
 
-### Enter your total monthly budget (€): 1000
+- Total expenses
+- Remaining budget
+- Monthly budget breakdown
 
-Calculating your personalized budget...
+### Priorities
+Manages how income is distributed across spending categories such as:
 
-Budget distribution:
-- Rent: €400
-- Groceries: €210 (based on BMI and caloric needs)
-- Transportation: €100
-- Savings: €150
-- Lifestyle (Gym, Going Out, Hair, Gifts, etc.): €140
+- Rent
+- Groceries
+- Insurance
+- Bike subscription
+- Gym subscription
+- Going out
+- Hair salon
+- Hygienic products
+- Gifts
+- Debts
+- Savings
 
-Estimated monthly academic expenses:
-- Tuition: €250
-- Device costs: €50
-- Stationery & Printing: €30
-- Total academic expenses: €330
+### Student
+Calculates monthly academic expenses, including:
 
-Your remaining balance: €70
-# Setup 
-git clone https://github.com/your-username/student-budget-planner.git
-cd student-budget-planner
+- Tuition
+- Printing
+- Stationery
+- Study device costs
+
+### Visualisation
+Creates graphs for:
+
+- Budget distribution
+- Expense priorities
+- Calorie-related data
+
+---
+
+## Requirements
+
+- Python **3.8 or higher**
+- `pip`
+- `matplotlib`
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mayachanda17/PRA2031-Project.git
+cd PRA2031-Project
+```
+
+Install required libraries:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## How to Run
+
+Run the program with:
+
+```bash
+python src/budget_planner.py
+```
+
+---
+
+## Example Interaction
+
+```
+Welcome to the budget planner!
+
+Please enter your name: John
+Please enter your age: 20
+Enter whether you are a MAN or WOMAN: MAN
+Please enter your height (in centimeters): 175
+Please enter your weight (in kilos): 70
+Enter your activity level (1-5): 3
+Please enter your monthly budget: 1000
+```
+
+The program then calculates:
+
+- Personal health results
+- Budget breakdown
+- Expense priorities
+- Academic costs
+- Visualisations
+
+---
 
 ## Libraries Used
 
 - Python standard library
-- math
-- matplotlib
+- `math`
+- `matplotlib`
 
-# Prerequisites
-- Python 3.8 or higher
-- pip (Python package manager)
+---
 
-# Project Structure 
-1. Code:
-# Classes Description 
-- Person.py: This class is responsible for handling personal health-related calculations such as age, height, weight, bmi, bmr, activity level, calorie intake
-- Priorities.py Manages and analyzes how a user distributes their monthly budget across different spending categories (Rent, Groceries, Insurance, Bike subscription, Gym subscription, Going out, Hair salon, Hygienic products, Gifts, Debts, Savings). The used data is estimated on average cost of living in Maastricht. The main goal is to determine how a user's total budget is distributed across financial priorities.
-- Student.py Calculates a student’s monthly academic expenses, including device costs, stationery, printing, and tuition. Its purpose is to estimate the total amount a student spends each month on education-related needs.
+## Future Improvements
 
-# Future improvements 
+- Add file export for results
+- Improve error handling and input validation
+- Add more detailed spending categories
+- Add a graphical user interface
+- Support saving and comparing multiple student profiles
 
+---
 
-# Authors/Contact Details 
-- Maya Chanda (ma.chanda@student.maastrichtuniversity.nl)
-- Szonja Szekeres (s.szekeres@student.maastrichtuniversity.nl)
-- Szymon Stembalski (s.stembalski@student.maastrichtuniversity.nl)
-- Maya Eden (m.gohy@student.maastrichtuniversity.nl)
-- Mila Croci (m.croci@student.maastrichtuniversity.nl)
+## Authors
 
-# License 
-Academic project - not for commercial use
+- Maya Chanda — ma.chanda@student.maastrichtuniversity.nl  
+- Szonja Szekeres — s.szekeres@student.maastrichtuniversity.nl  
+- Szymon Stembalski — s.stembalski@student.maastrichtuniversity.nl  
+- Maya Eden — m.gohy@student.maastrichtuniversity.nl  
+- Mila Croci — m.croci@student.maastrichtuniversity.nl  
 
+---
 
-libraries, python , mathplotlib 
-<<<<<<< HEAD
-files with the classes and aim of class and functions in the classes
-screenshot plot 
-how do we call the classes in diff files 
-data 
+## AI Assistance Disclosure
 
-=======
-files with the classes and aim of class and functions
->>>>>>> cb0fc2fc9f1f27c8571f30a30f71a943a75a6ff9
+AI tools (ChatGPT) were used during the development of this project to assist with debugging, code explanations, and documentation improvements. The authors reviewed, modified, and verified all suggested code to ensure correctness and understanding. All final design decisions and implementation were made by the project authors.
+
+---
+
+## License
+
+Academic project — not for commercial use.
