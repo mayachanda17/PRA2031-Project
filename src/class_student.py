@@ -1,5 +1,5 @@
+""" Gather budget information about the user if a student"""
 class Student: 
- """ Gather budget information about the user if a student"""
     def __init__(self, device_cost=0, stationary_cost=0, printing_price=0, monthly_tuition_payment=0):
         self.device_cost = device_cost
         self.stationary_cost = stationary_cost
@@ -84,9 +84,9 @@ class Student:
     def tuition_fee (self):
         monthly_tuition= input("\n do you pay yourself a monthly tuiton (Y/N): ")
         if monthly_tuition.upper()== "Y":
-            student1.monthly_tuition_payment= float(input("what is your monthly university payment?: "))
+            self.student1.monthly_tuition_payment= float(input("what is your monthly university payment?: "))
         else:
-            student1.monthly_tuition_payment= 0
+            self.student1.monthly_tuition_payment= 0
         monthly_tuition = self.monthly_tuition_payment
     def total_monthly_academic_costs (self):
         total_monthly_academic_costs= (self.device_cost+self.stationary_cost +self.printing_price +self.monthly_tuition_payment)
