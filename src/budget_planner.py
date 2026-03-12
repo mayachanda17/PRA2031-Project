@@ -39,9 +39,10 @@ person1 = Person(name, age, height, weight, gender, activity_level)
 # -------------------------
 # PRIORITIES INPUT
 # -------------------------
-with open ("average_costs.txt", "r") as f:
+groceries = 0
+with open ("src/average_costs.txt", "r") as f:
     for line in f:
-        if "=" in f:
+        if "=" in line:
             key, value= line.strip().split("=")
             if key.strip() == "Groceries":
                 groceries = float(value.strip())
@@ -51,7 +52,7 @@ priorities1 = Priorities (
 income = float(input("Enter your monthly budget:")),
 rent = float(input("Enter your rent price: ")),
 insurance = float(input("Enter your insurance price: ")),
-groceries = groceries
+groceries = groceries,
 bike_subscription = float(input("Enter your bike subscription price: ")),
 gym_subscription = float(input("Enter your gym subscription price: ")),
 going_out = float(input("Enter your going out price: ")),

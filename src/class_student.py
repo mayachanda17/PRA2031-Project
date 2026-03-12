@@ -81,12 +81,13 @@ class Student:
             self.printing_price = 0
     """ source: https://www.maastrichtuniversity.nl/upgrade-print-credit-students#:~:text=Attention:,remain%20unchanged%20at%2015%20cents."""
         
-    def tuiton_fee (self):
+    def tuition_fee (self):
         monthly_tuition= input("\n do you pay yourself a monthly tuiton (Y/N): ")
         if monthly_tuition.upper()== "Y":
-            self.monthly_tuiton_payment= float(input("what is your monthly university payment?: "))
+            self.monthly_tuition_payment= float(input("what is your monthly university payment?: "))
         else:
             self.monthly_tuition_payment= 0
+        monthly_tuition = self.monthly_tuition_payment
     def total_monthly_academic_costs (self):
         total_monthly_academic_costs= (self.device_cost+self.stationary_cost +self.printing_price +self.monthly_tuition_payment)
         return total_monthly_academic_costs
