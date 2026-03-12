@@ -29,7 +29,6 @@ gender = input("Enter whether you are a MAN or WOMAN: ")
 height = float(input("Please enter your height (in centimeters): "))
 weight = float(input("Please enter your weight (in kilos): "))
 activity_level = int(input("Enter your activity level (1-5): "))
-budget = float(input("Please enter your monthly budget: "))
 
 # -------------------------
 # CREATE MAIN OBJECTS
@@ -40,12 +39,19 @@ person1 = Person(name, age, height, weight, gender, activity_level)
 # -------------------------
 # PRIORITIES INPUT
 # -------------------------
+with open ("average_costs.txt", "r") as f:
+    for line in f:
+        if "=" in f:
+            key, value= line.strip().split("=")
+            if key.strip() == "Groceries":
+                groceries = float(value.strip())
 print()
 print("--- MONTHLY EXPENSE PRIORITIES ---")
 priorities1 = Priorities (
-income = float(input("Enter your income:")),
+income = float(input("Enter your monthly budget:")),
 rent = float(input("Enter your rent price: ")),
 insurance = float(input("Enter your insurance price: ")),
+groceries = groceries
 bike_subscription = float(input("Enter your bike subscription price: ")),
 gym_subscription = float(input("Enter your gym subscription price: ")),
 going_out = float(input("Enter your going out price: ")),
@@ -55,10 +61,6 @@ gifts = float(input("Enter your preferred gifts budget: ")),
 debts = float(input("Enter your debts price: ")),
 savings = float(input("Enter your preferred savings amount: ")),
 )
-with open ("average_costs.txt", "r") as f:
-    for line in f:
-        key, value= line.strip().split("=")
-        if key == "groceries":
             
 budget1 = Budget(priorities1)
 print(dir(budget1))
