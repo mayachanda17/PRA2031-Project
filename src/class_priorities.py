@@ -5,7 +5,6 @@ class Priorities :
     """ Define the priority of the activities depending on the budget of the user"""
 
     def __init__ (self, income, rent, groceries, insurance, bike_subscription, gym_subscription, going_out, hair_salon, hygenic_products, gifts, debts, savings):
->>>>>>> 4d15ebf30b0912cc7afd33ce5db8b2df890c826d
         self.income = income
         self.rent = rent
         self.groceries = groceries 
