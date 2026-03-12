@@ -1,4 +1,4 @@
- """ Define the priority of the activities depending on the budget of the user"""
+""" Define the priority of the activities depending on the budget of the user"""
 class Priorities :
     def __init__ (self, income = 0, rent = 0, groceries = 0, insurance = 0, bike_subscription = 0, gym_subscription = 0, going_out = 0, hair_salon = 0, hygenic_products = 0, gifts = 0, debts = 0, savings = 0):
 
