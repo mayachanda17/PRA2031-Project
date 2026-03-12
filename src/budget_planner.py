@@ -30,40 +30,30 @@ budget = float(input("Please enter your monthly budget: "))
 # CREATE MAIN OBJECTS
 # -------------------------
 person1 = Person(name, age, height, weight, gender, activity_level)
-budget1 = Budget(budget)
+
 
 # -------------------------
 # PRIORITIES INPUT
 # -------------------------
 print()
 print("--- MONTHLY EXPENSE PRIORITIES ---")
-income = float(input("Enter your income:"))
-rent = float(input("Enter your rent price: "))
-groceries = float(input("Enter your groceries price: "))
-insurance = float(input("Enter your insurance price: "))
-bike_subscription = float(input("Enter your bike subscription price: "))
-gym_subscription = float(input("Enter your gym subscription price: "))
-going_out = float(input("Enter your going out price: "))
-hair_salon = float(input("Enter your hair salon price: "))
-hygenic_products = float(input("Enter your hygienic products price: "))
-gifts = float(input("Enter your preferred gifts budget: "))
-debts = float(input("Enter your debts price: "))
-savings = float(input("Enter your preferred savings amount: "))
-
-priorities1 = Priorities(
-    income,
-    rent,
-    groceries,
-    insurance,
-    bike_subscription,
-    gym_subscription,
-    going_out,
-    hair_salon,
-    hygenic_products,
-    gifts,
-    debts,
-    savings,
+priorities1 = Priorities (
+income = float(input("Enter your income:")),
+rent = float(input("Enter your rent price: ")),
+groceries = float(input("Enter your groceries price: ")),
+insurance = float(input("Enter your insurance price: ")),
+bike_subscription = float(input("Enter your bike subscription price: ")),
+gym_subscription = float(input("Enter your gym subscription price: ")),
+going_out = float(input("Enter your going out price: ")),
+hair_salon = float(input("Enter your hair salon price: ")),
+hygenic_products = float(input("Enter your hygienic products price: ")),
+gifts = float(input("Enter your preferred gifts budget: ")),
+debts = float(input("Enter your debts price: ")),
+savings = float(input("Enter your preferred savings amount: ")),
 )
+budget1 = Budget(priorities1)
+print("Total expenses:", budget1.total_expenses())
+print("Remaining budget:", budget1.remaining_budget())
 
 # -------------------------
 # STUDENT INPUT
