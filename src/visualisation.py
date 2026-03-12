@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+"""Plot the visualisations"""
 def plot_budget_distribution(budget):
     data = budget.monthly_priority_costs()
 

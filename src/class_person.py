@@ -1,4 +1,5 @@
 class Person:
+    """ Aquire all information about the user and calcualte BMR and BMI"""
     def __init__(self, name, age, height, weight, gender, activity_level):
         self.name = name
         self.age = age
@@ -131,6 +132,7 @@ class Person:
         monthly_kcal = self.calorie_needs * 30
         estimated = (monthly_kcal / 1000) * price_per_1000_kcal
         return round(estimated, 2)
+
 
 
 

@@ -1,5 +1,11 @@
 class Priorities :
+<<<<<<< HEAD
     def __init__ (self, income = 0, rent = 0, groceries = 0, insurance = 0, bike_subscription = 0, gym_subscription = 0, going_out = 0, hair_salon = 0, hygenic_products = 0, gifts = 0, debts = 0, savings = 0):
+=======
+    """ Define the priority of the activities depending on the budget of the user"""
+
+    def __init__ (self, income, rent, groceries, insurance, bike_subscription, gym_subscription, going_out, hair_salon, hygenic_products, gifts, debts, savings):
+>>>>>>> 4d15ebf30b0912cc7afd33ce5db8b2df890c826d
         self.income = income
         self.rent = rent
         self.groceries = groceries 
@@ -13,6 +19,11 @@ class Priorities :
         self.debts = debts
         self.savings = savings
 
+    def __str__(self):
+        return (f"Income: €{self.income}\n"
+                f"Rent: €{self.rent}\n"
+                f"Groceries: €{self.groceries}\n"
+                f"Savings: €{self.savings}")
 
     def priority_of_activities(self):
 

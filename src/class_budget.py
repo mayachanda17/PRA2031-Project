@@ -1,5 +1,6 @@
 from class_person import Person
 class Budget:
+    """Divide the monthly budget of the user between the different activities"""
     def __init__(self, priorities, student=None):
         self.priorities = priorities
         self.student = student
