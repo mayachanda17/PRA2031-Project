@@ -84,9 +84,9 @@ class Student:
     def tuition_fee (self):
         monthly_tuition= input("\n do you pay yourself a monthly tuiton (Y/N): ")
         if monthly_tuition.upper()== "Y":
-            self.monthly_tuition_payment= float(input("what is your monthly university payment?: "))
+            student1.monthly_tuition_payment= float(input("what is your monthly university payment?: "))
         else:
-            self.monthly_tuition_payment= 0
+            student1.monthly_tuition_payment= 0
         monthly_tuition = self.monthly_tuition_payment
     def total_monthly_academic_costs (self):
         total_monthly_academic_costs= (self.device_cost+self.stationary_cost +self.printing_price +self.monthly_tuition_payment)
