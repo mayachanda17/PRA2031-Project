@@ -43,20 +43,5 @@ class Priorities :
         if total == 0:
             return  {k: 0 for k in activities}
         return  {k: v / total for k, v in activities.items()}
-        
-my_budget = Priorities(
-    rent=float("Enter your rent price:"),
-    groceries = float("Enter your groceries:"),
-    insurance = float("Enter your insurance price:"),
-    bike_subscription = float("Enter your bike subscription price:"),
-    gym_subscription = float("Enter your gym subscription price:"),
-    going_out = float("Enter your going out price:"),
-    hair_salon = float("Enter your hair salon price:"),
-    hygenic_products = float("Enter your hygenic products price:"),
-    gifts = float("Enter your prefered price for gifts:"),
-    debts = float("Enter your debts price:"),
-    savings = float("Enter your prefered savings price:")
 
-    )
-print(my_budget.priority_of_activities())
 

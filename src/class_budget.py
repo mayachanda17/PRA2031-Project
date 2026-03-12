@@ -17,14 +17,3 @@ class Budget:
         self.exercising_budget = overall_budget * exercise_pct
         self.transportation_budget = overall_budget * transport_pct
         self.emergency_fund = overall_budget * emergency_pct
-
-budget1 = Budget(budget) 
-print("Your Rent Budget is €", budget1.rent)
-print("Your Food Budget is €", budget1.food_budget)
-print("Your Socialising Budget is €", budget1.socialising_budget)
-print("Your Exercising Budget is €", budget1.exercising_budget)
-print("Your Transportation Budget is €", budget1.transportation_budget)
-print(budget1.emergency_fund, "€ is being added into your emergency fund")
-
-print("Your Transportation Budget is €", budget1.transportation_budget)
-print(budget1.emergency_fund, "€ is being added into your emergency fund")

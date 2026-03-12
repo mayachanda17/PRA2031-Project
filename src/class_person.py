@@ -1,5 +1,5 @@
 class Person:
-    def __init__(self, name, age, height, gender, bmi, activity_level, bmr, calorie_needs):
+    def __init__(self, name, age, height, weight, gender, activity_level):
         self.name = name
         self.age = age
         self.height = height
@@ -34,7 +34,7 @@ class Person:
 
     @property
     def weight(self):
-        return self.weight
+        return self._weight
     @weight.setter
     def weight(self, weight):
         if weight <= 0:
@@ -48,8 +48,8 @@ class Person:
     @gender.setter
     def gender(self, gender):
         gender = gender.strip().lower()
-        if gender != "man" and gender != "wmoman":
-            raise ValueError("Gender must be "man" or "woman"")
+        if gender != "man" and gender != "woman":
+            raise ValueError("For this program, you must enter sex as either MAN or WOMAN")
         self._gender = gender
 
 
@@ -72,7 +72,7 @@ class Person:
     def activity_level (self):
         return self._activity_level
 
-    @activity_level_setter
+    @activity_level.setter
     def activity_level(self, activity_level):
         if activity_level < 1 or activity_level > 5:
             raise ValueError("Activity level must be between 1 and 5")
@@ -91,22 +91,22 @@ class Person:
     def calorie_needs(self):
         #Step 1: Multiply BMR by activity level factor
         if self.activity_level == 1:
-            calories = self._bmr * 1.2
+            calories = self.bmr * 1.2
         elif self.activity_level == 2:
             calories = self.bmr * 1.375
         elif self.activity_level == 3:
-            calories = self._bmr * 1.55
-        elif self.activity level == 4:
-            calories = self._bmr * 1.725
+            calories = self.bmr * 1.55
+        elif self.activity_level == 4:
+            calories = self.bmr * 1.725
         elif self.activity_level == 5:
-            calories = sefl._bmr * 1.9
+            calories = self.bmr * 1.9
         
         #Step 2 = Adjust for age ( depending on metabolism slowing down with age)
         if self.age < 18: 
             calories *= 1.15 # growing teens need 15% more calories
         elif self.age < 30:
             calories *= 1.05 # need 5% more
-            elif self.age < 40:
+        elif self.age < 40:
             pass # as is
         elif self.age < 50:
             calories *= 0.97 # slows down 3%
@@ -115,7 +115,7 @@ class Person:
         elif self.age < 70:
             calories *= 0.91 # slows doxn 9%
         else:
-            calories = 0.88
+            calories *= 0.88
         #Step 3 = adjust for bmi
         if self.bmi < 18.5:
             calories += 300
@@ -127,7 +127,7 @@ class Person:
             calories -= 500
         return round(calories)
 
-   def estimated_grocery_budget(self, price_per_1000_kcal: float = 4) -> float:
+    def estimated_grocery_budget(self, price_per_1000_kcal: float = 4) -> float:
         monthly_kcal = self.calorie_needs * 30
         estimated = (monthly_kcal / 1000) * price_per_1000_kcal
         return round(estimated, 2)
