@@ -1,20 +1,12 @@
 import matplotlib.pyplot as plt
 def plot_budget_distribution(budget):
+    data = budget.monthly_priority_costs()
 
-    labels = ["Rent", "Food", "Social", "Exercise", "Transport", "Emergency"]
-    values = [
-        budget.rent,
-        budget.food_budget,
-        budget.socialising_budget,
-        budget.exercising_budget,
-        budget.transportation_budget,
-        budget.emergency_fund
-    ]
+    labels = list(data.keys())
+    values = list(data.values())
 
-    plt.figure()
     plt.pie(values, labels=labels, autopct='%1.1f%%')
     plt.title("Monthly Budget Distribution")
-    plt.legend(labels, title="Categories")
     plt.show()
 
 def plot_priorities(priorities):

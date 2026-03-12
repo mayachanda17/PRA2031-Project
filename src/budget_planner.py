@@ -9,6 +9,8 @@ import class_budget
 #print(class_budget.__file__)
 #print(Budget)
 from class_priorities import Priorities
+import class_priorities
+print("Using file:", class_priorities.__file__)
 from class_student import Student
 
 print("Welcome to the budget planner!")
@@ -108,5 +110,8 @@ print("Total monthly academic costs: €", round(student1.total_monthly_academic
 # VISUALISATIONS
 # -------------------------
 plot_budget_distribution(budget1)
-plot_priorities(priorities1.priority_of_activities)
+activities = priorities1.priority_of_activities()
+print("activities:", activities)
+plot_priorities(activities)
+plot_priorities(activities)
 plot_calorie_needs(person1.bmr)
